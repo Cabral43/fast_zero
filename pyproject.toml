@@ -6,11 +6,15 @@ authors = ["Carlos Cabral <cabralc43@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.11.*"
+python = "^3.12"
 fastapi = {extras = ["standard"], version = "^0.112.0"}
 sqlalchemy = "^2.0.32"
 pydantic-settings = "^2.4.0"
 alembic = "^1.13.2"
+pwdlib = {extras = ["argon2"], version = "^0.2.1"}
+python-multipart = "^0.0.19"
+pyjwt = "^2.10.1"
+tzdata = "^2024.2"
 
 
 [tool.poetry.group.dev.dependencies]
