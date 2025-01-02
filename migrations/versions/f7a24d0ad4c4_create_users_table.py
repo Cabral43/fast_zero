@@ -26,7 +26,7 @@ def upgrade() -> None:
         sa.Column('username', sa.String, unique=True, nullable=False),
         sa.Column('password', sa.String, nullable=False),
         sa.Column('email', sa.String, unique=True, nullable=False),
-        sa.Column('created_at', sa.DateTime, server_default=sa.text('CURRENT_TIMESTEMP'), nullable=False),
+        sa.Column('created_at', sa.TIMESTAMP(timezone=True), server_default=sa.text('CURRENT_TIMESTAMP'), nullable=False),
     )
     # ### end Alembic commands ###
 
